@@ -492,8 +492,8 @@ async def checktypeOfParameter(targetArray, assertTypeArray):
       if type(tArr) != assertTypeArray[counter]:
         if type(targetArray != "list"):
           raise Exception(counter)
-        else:
-          raise Exception(counter)
+      else:
+        raise Exception(counter)
       return True
   except Exception as e:
     exc_type, exc_object, exc_tb = sys.exc_info()
