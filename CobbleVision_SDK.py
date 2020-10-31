@@ -438,7 +438,7 @@ async def getCalculationVisualization(id, returnBase64Bool, width, height):
     
     keyArray = ["id", "returnBase64Bool", "width", "height", "Your Api Username", "Your API Token"]
     valueArray = [id, returnBase64Bool, width, height, apiuserName, apitoken]
-    typeArray = ["array", "boolean", "number", "number" "string", "string"]
+    typeArray = ["string", "boolean", "number", "number" "string", "string"]
     
     try:
       await checkTypeOfParameter(valueArray, typeArray)
