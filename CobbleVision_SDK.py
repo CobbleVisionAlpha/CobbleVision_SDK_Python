@@ -339,7 +339,7 @@ async def waitForCalculationCompletion(calculationIDArray):
 # @param {array} IDArray Array of ID's as Strings
 # @returns {Response} This returns the DeleteCalculationResponse. The body is in JSON format.
        
-function deleteCalculation(IDArray)
+async def deleteCalculation(IDArray):
   try:
     endpoint = "calculation"
     if BaseURL[len(BaseURL)-1] = "/":
@@ -385,7 +385,7 @@ function deleteCalculation(IDArray)
 # @param {boolean} returnOnlyStatusBool Return full result or only status? See Doc for more detailed description!
 # @returns {Response} This returns the GetCalculationResult. The body is in json format.
 
-async def getCalculationResult(IDArray, returnOnlyStatusBool)
+async def getCalculationResult(IDArray, returnOnlyStatusBool):
   try:
     endpoint = "calculation"
     if BaseURL[len(BaseURL)-1] = "/":
