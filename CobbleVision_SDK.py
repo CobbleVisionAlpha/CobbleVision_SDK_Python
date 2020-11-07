@@ -234,10 +234,13 @@ async def launchCalculation(algorithms, media, type, notificationURL):
     if len(invalidMedia) > 0:
       raise Exception("You supplied a media ID that is not valid!")
       
-    algorithms = listfilter(lambda algID:checkForValidObjectID(algID), algorithms))
+    invalidAlgorithms = listfilter(lambda algID:checkForValidObjectID(algID), algorithms))
     if len(invalidAlgorithms) > 0:
       raise Exception("You supplied an ID that is not valid!")
-      
+    
+    #throws exception if not found  
+    valid_job_types.index(type)
+
     jsonObject = {
       "algorithms": algorithms,
       "media": media,
